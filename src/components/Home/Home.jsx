@@ -1,10 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLinkClickHandler, useLoaderData } from 'react-router-dom'
 import heroImg from '../../assets/hero.jpg'
 import Statistics from '../Statistics/Statistics'
+import JobList from '../JobList/JobList'
+import Blog from '../Blog/Blog'
+import FeJobs from '../FeJobs/FeJobs'
 
 const Home = () => {
+   
+    const   featuredBobs = useLoaderData()
+   
+
+
+    const [jobListLoder, setDogImage] = useState([]);
+
+    // 3. Create out useEffect function
+  useEffect(() => {
+    fetch("./../../../public/joblist.json")
+    .then(response => response.json())
+    .then(data => setDogImage(data))
+  },[])
+
+
+
   return (
+    <>
     <div className='my-container flex flex-col items-center justify-between lg:flex-row'>
     {/* Text Content */}
     <div className='mb-30 lg:max-w-lg  lg:pr-5 lg:mb-0'>
@@ -26,10 +46,10 @@ const Home = () => {
           to='/about'
           className='btn-primary'
         >
-          Learn More
+         Get Started
         </Link>
       </div>
-      <Statistics></Statistics>
+   
     </div>
     {/* Lottie Animation */}
     <div className='relative lg:w-1/2 mt-8'>
@@ -37,11 +57,48 @@ const Home = () => {
       <img
         src={heroImg}
         alt=''
-        className='w-5/6 mx-auto mb-12 mt-12 rounded-lg shadow-md bg-gray-500'
+        className='w-full mx-auto mb-12 mt-12 rounded-lg  bg-white'
       />
       </div>
     </div>
+  
   </div>
+  <div className='my-container'>
+      <div className='grid gap-6 mb-8 lg:grid-cols-4 sm:grid-cols-2'>
+</div>
+    </div>
+<div className='text-center'>
+<h2 className='font-medium text-3xl'> Job Category List</h2>
+
+</div>
+    <div className='my-container '>
+      <div className='product-container '>
+    {
+    jobListLoder && 
+    jobListLoder.map(jobli=>(<JobList
+    key={jobli.id}
+    jobli={jobli}
+    ></JobList>))
+    }
+    </div>
+    </div>
+    <div className='text-center'>
+<h2 className='font-medium text-3xl'> Featured Jobs</h2>
+    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+</div>
+    <div className='my-container '>
+      <div className='product-container '>
+{
+  featuredBobs &&
+  featuredBobs.map(feJobs=>(<FeJobs
+    key={feJobs.id}
+    feJobs={feJobs}
+  ></FeJobs>))
+}
+
+      </div>
+    </div>
+  </>
   
   )
 }

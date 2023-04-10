@@ -15,7 +15,7 @@ const Header = () => {
         <Link to='/' className='inline-flex items-center'>
       
           <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-            nextPage
+          CareerHome
           </span>
         </Link>
 
@@ -31,22 +31,22 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/books'
+              to='/statistics'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
-              Books
+            Statistics
             </NavLink>
           </li>
           <li>
             <NavLink
-              to='/about'
+              to='/blog'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
-              About us
+              Blog
             </NavLink>
           </li>
           <p>
- <button className=' btn-primary'> show Jobs</button>
+ <button className=' btn-primary'> Star Applying</button>
       </p>
         </ul>
     
