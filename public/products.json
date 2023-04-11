@@ -1,6 +1,7 @@
 [
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead11",
+        "completed": true,
         "JobTitle": "computer Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": " Rangpur, Dhaka, Bangladesh",
@@ -20,6 +21,7 @@
     },
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead22",
+        "completed": false,
         "JobTitle": "mobile Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": " mirpur, Dhaka, Bangladesh",
@@ -39,6 +41,7 @@
     },
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead33",
+        "completed": true,
         "JobTitle": "laptop  Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": "Khulna, Bangladesh",
@@ -58,6 +61,7 @@
     },
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead44",
+        "completed": true,
         "JobTitle": "car Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": "kustia, Bangladesh",
@@ -77,6 +81,7 @@
     },
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead55",
+        "completed": false,
         "JobTitle": "bick Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": "vola, dhaka, Bangladesh",
@@ -96,6 +101,7 @@
     },
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead66",
+      "completed": true,
         "JobTitle": "software Engineer",
         "name": "ULTRABOOST 22 SHOES",
         "address": "Dhaka, bonani, Bangladesh",
@@ -103,7 +109,7 @@
         "Phone": 2074363636,
         "Email": "a@gmail.com",
         "Description":" A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
-        "img": "https://i.ibb.co/JyRgv3S/google-1-1-1-1.png",
+        "img": "https://i.ibb.co/sgPF6kY/images-1.png",
         "Responsibility": " Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "Educational": "Bachelor degree to complete any reputational university.",
         "Exp": "2-3 Years in this field.",

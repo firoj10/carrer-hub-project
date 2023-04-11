@@ -97,7 +97,7 @@ const Home = () => {
 
       </div>
     <div className='text-center'>
-    <button  onClick={()=>loadmore()} className='btn-primary'>load more</button>
+    <button  onClick={()=>loadmore()} className='btn-primary'>See All Jobs</button>
     </div>
     </div>
   </>

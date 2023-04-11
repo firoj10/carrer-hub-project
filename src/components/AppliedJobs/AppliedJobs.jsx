@@ -11,13 +11,6 @@ const [localJob, setLocaljob]=useState([])
           .then((response) => response.json())
           .then((data) =>setApplyjob(data) );
       }, []);
-
-
-console.log(localJob.Educational)
-
-
-
-
 useEffect(()=>{
 
     const storedCart = getShoppingCart();
@@ -36,12 +29,31 @@ useEffect(()=>{
 },[applyJob])
 
 
+const [filter, setFilter] = useState('all');
+  
+const handleFilterClick = (value) => {
+  setFilter(value);
+};
 
+const filteredTasks = localJob.filter((ljon) => {
+  if (filter === 'all') {
+    return true;
+  } else if (filter === 'completed') {
+    return ljon.completed;
+  } else if (filter === 'incomplete') {
+    return !ljon.completed;
+  }
+});
 
     return (
-        <div>
+        <div className='pt-20'>
+             <div className='text-right my-container '>
+        <button className='btn-primary p-2 ml-5'  onClick={() => handleFilterClick('all')}>All jobs</button>
+        <button className='btn-primary p-2 ml-5'  onClick={() => handleFilterClick('completed')}>Remote Jobs</button>
+        <button  className='btn-primary p-2 ml-5' onClick={() => handleFilterClick('incomplete')}>Full-time Jobs</button>
+      </div>
             {
-                localJob.map(ljon =>(<AppliedJob
+                filteredTasks.map(ljon =>(<AppliedJob
                 key={localJob.id}
                 ljon ={ljon }
                 ></AppliedJob>))
