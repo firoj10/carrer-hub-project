@@ -12,7 +12,7 @@
 }
 
 .btn-primary{
-  @apply bg-indigo-600 rounded mt-2 text-white p-2;
+  @apply bg-indigo-600 rounded mt-2 font-normal text-white p-2;
 }
 
 .btn-outlined{
@@ -20,9 +20,9 @@
 }
 
 .active{
-  @apply font-medium tracking-wide text-cyan-600 transition-colors duration-200;
+  @apply font-medium tracking-wide text-indigo-600 transition-colors duration-200;
 }
 
 .default{
-  @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-cyan-600;
+  @apply font-medium tracking-wide text-indigo-400 transition-colors duration-200 hover:text-indigo-600;
 }

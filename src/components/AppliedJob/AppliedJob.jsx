@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const  AppliedJob = ({ljon }) => {
     const {JobTitle, name, Salary,loc,  address, img, locimg, takimg}=ljon;
     return (
-        <div className='p-10 m-10 bg-slate-100 flex justify-between items-center my-container'>
+        <div className=' mt-6 bg-slate-100 flex justify-between items-center my-container'>
          <div className='flex gap-20 '>
          <div>
           <img src={img} alt="" />
@@ -27,7 +27,7 @@ const  AppliedJob = ({ljon }) => {
         </p>
       <p className='pl-4 flex'>
         <img src={takimg} alt="" />
-      <span>  {Salary}</span>
+      <span>Salay:  {Salary}</span>
         </p>
     
       </div>

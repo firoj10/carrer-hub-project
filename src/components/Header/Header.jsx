@@ -79,7 +79,7 @@ const Header = () => {
                     <Link to='/' className='inline-flex items-center'>
             
                       <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                        nextPage
+                      CareerHome
                       </span>
                     </Link>
                   </div>
@@ -103,24 +103,32 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to='/books'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        Books
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to='/about'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        About Us
-                      </Link>
-                    </li>
+          <NavLink
+              to='/appliedjobs'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Applied Jobs
+            </NavLink>
+          </li>
+          <li>
+          <NavLink
+              to='/statistics'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Statistics
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/blog'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Blog
+            </NavLink>
+          </li>
                     <li>
                    
-                    <button className=' btn-primary'> show Jobs</button>
+                    <button className=' btn-primary'> Star Applying</button>
                     </li>
                   </ul>
                 </nav>
