@@ -72,7 +72,7 @@ const Home = () => {
 
 </div>
     <div className='my-container '>
-      <div className='product-container '>
+      <div className='product-container'>
     {
     jobListLoder && 
     jobListLoder.map(jobli=>(<JobList
@@ -87,7 +87,7 @@ const Home = () => {
     <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
 </div>
     <div className='my-container '>
-      <div className='product-container '>
+      <div className='grid gap-8 m-7 mb-8 md:grid-cols-2 lg:grid-cols-2 '>
 {
   featuredBobs &&
   featuredBobs.map(feJobs=>(<FeJobs

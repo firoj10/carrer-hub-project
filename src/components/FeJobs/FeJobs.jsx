@@ -6,17 +6,17 @@ const FeJobs = ({feJobs}) => {
     console.log('ooooooooooo',id)
     return (
         <div>
-        <div className=''>
+        <div className='p-5 bg-slate-100 rounded'>
      <img
        src={img}
        alt='book cover'
        className=''
      />
-     <p>{name}</p>
-     <p>{JobTitle}</p>
-     <p>{address}</p>
+     <p className='pt-6'>{name}</p>
+     <p className='pt-1'>{JobTitle}</p>
+     <p className='pt-1'>{address}</p>
      
-     <Link to={`/jobdetails/${id}`}><button className='btn-primary'>View Details</button></Link>
+     <Link to={`/jobdetails/${id}`}><button className='bg-indigo-600 rounded mt-2 text-white p-2'>View Details</button></Link>
     
 
     </div>

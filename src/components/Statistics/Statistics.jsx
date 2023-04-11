@@ -49,7 +49,7 @@ const Statistics = () => {
 
 
     return (
-      <div className='width-1/2  mx-auto p-auto'>
+      <div className=' my-container'>
       
   
         <AreaChart
