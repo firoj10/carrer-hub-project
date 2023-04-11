@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link,  useLoaderData } from 'react-router-dom'
 import heroImg from '../../assets/hero.jpg'
-
 import JobList from '../JobList/JobList'
-
 import FeJobs from '../FeJobs/FeJobs'
 
 const Home = () => {
-   
-    const   featuredBobs = useLoaderData()
-   
-
-
+    const  featuredBobs = useLoaderData()
     const [jobListLoder, setDogImage] = useState([]);
 
     ;
@@ -21,6 +15,11 @@ const Home = () => {
     .then(data => setDogImage(data))
   },[])
 
+  const [sliceElement, setsliceElement]= useState(4);
+  const slice = featuredBobs.slice(0, sliceElement)
+  const loadmore = ()=>{
+    setsliceElement(sliceElement + sliceElement);
+  }
 
 
   return (
@@ -43,7 +42,7 @@ const Home = () => {
       <div className=''>
         
         <Link
-          to='/about'
+          to='/'
           className='btn-primary'
         >
          Get Started
@@ -86,17 +85,20 @@ const Home = () => {
 <h2 className='font-medium text-3xl'> Featured Jobs</h2>
     <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
 </div>
-    <div className='my-container '>
+    <div className='my-container  '>
       <div className='grid gap-8 m-7 mb-8 md:grid-cols-2 lg:grid-cols-2 '>
 {
   featuredBobs &&
-  featuredBobs.map(feJobs=>(<FeJobs
+  slice.map(feJobs=>(<FeJobs
     key={feJobs.id}
     feJobs={feJobs}
   ></FeJobs>))
 }
 
       </div>
+    <div className='text-center'>
+    <button  onClick={()=>loadmore()} className='btn-primary'>load more</button>
+    </div>
     </div>
   </>
   

@@ -5,7 +5,8 @@ const FeJobs = ({feJobs}) => {
     const {id, img,name, JobTitle, address}= feJobs;
     console.log('ooooooooooo',id)
     return (
-        <div>
+      <div>
+          <div>
         <div className='p-5 bg-slate-100 rounded'>
      <img
        src={img}
@@ -21,6 +22,8 @@ const FeJobs = ({feJobs}) => {
 
     </div>
     </div>
+   
+      </div>
     );
 };
 
