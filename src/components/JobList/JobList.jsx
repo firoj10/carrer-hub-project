@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import JobsList from '../JobsList/JobsList';
+;
 
 const JobList = ({jobli }) => {
  console.log(jobli.id)

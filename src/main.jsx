@@ -4,12 +4,11 @@ import App from './App'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home/Home';
-import JobList from './components/JobList/JobList';
+
 import Blog from './components/Blog/Blog';
-import JobsList from './components/JobsList/JobsList';
-import CartProductsLoder from './Loders/CartProductsLoder';
-import skillsPageLoader from './Loders/CartProductsLoder';
+
 import JobDetails from './components/JobDetails/JobDetails';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 
 
 
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('products.json')
+        loader: ()=> fetch('/products.json')
       },
       
       {
@@ -32,7 +31,11 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path: "jobdetails/:id",
+        path: "/appliedjobs",
+        element: <AppliedJobs></AppliedJobs>
+      },
+      {
+        path: "/jobdetails/:id",
         element: <JobDetails></JobDetails>,
       },
      

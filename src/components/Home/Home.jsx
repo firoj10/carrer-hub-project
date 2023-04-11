@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLinkClickHandler, useLoaderData } from 'react-router-dom'
+import { Link,  useLoaderData } from 'react-router-dom'
 import heroImg from '../../assets/hero.jpg'
-import Statistics from '../Statistics/Statistics'
+
 import JobList from '../JobList/JobList'
-import Blog from '../Blog/Blog'
+
 import FeJobs from '../FeJobs/FeJobs'
 
 const Home = () => {
@@ -14,9 +14,9 @@ const Home = () => {
 
     const [jobListLoder, setDogImage] = useState([]);
 
-    // 3. Create out useEffect function
+    ;
   useEffect(() => {
-    fetch("./../../../public/joblist.json")
+    fetch("/joblist.json")
     .then(response => response.json())
     .then(data => setDogImage(data))
   },[])
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
     <div className='my-container flex flex-col items-center justify-between lg:flex-row'>
-    {/* Text Content */}
+   ;
     <div className='mb-30 lg:max-w-lg  lg:pr-5 lg:mb-0'>
       <div className='max-w-xl mb-6 lg:mt-8'>
         
@@ -51,7 +51,7 @@ const Home = () => {
       </div>
    
     </div>
-    {/* Lottie Animation */}
+  ;
     <div className='relative lg:w-1/2 mt-8'>
       <div className='w-full lg:w-4/5 lg:ml-auto h-56 mt-30 sm:h-96'>
       <img
@@ -82,7 +82,7 @@ const Home = () => {
     }
     </div>
     </div>
-    <div className='text-center'>
+    <div className='text-center mt-20 pt-20'>
 <h2 className='font-medium text-3xl'> Featured Jobs</h2>
     <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
 </div>

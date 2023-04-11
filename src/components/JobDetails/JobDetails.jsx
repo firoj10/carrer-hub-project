@@ -1,26 +1,66 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
-import './../../../public/products.json'
-import JobSingleDetails from '../JobSingleDetails/JobSingleDetails';
+import { Link,  useParams } from 'react-router-dom';
+
+
+import { addToDb, getShoppingCart } from '../utilities/fakedb';
 
 const JobDetails = () => {
     const {id}= useParams()
+    const [jobDetail, setjobdetail]= useState([])
+    const [products, setProducts]=useState([]);
+    const [cart, setCart]=useState([]);
 
-    const [jobDetail, setjobdetail]= useState([ ])
+   
+    
 
-    // 3. Create out useEffect function
     useEffect(() => {
-        fetch('./../../../public/products.json')
+        fetch('/products.json')
           .then((response) => response.json())
           .then((data) => {
             const job = data.find((job) => job.id.toString() === id);
             setjobdetail(job);
           });
       }, [id]);
-      console.log('aaaaaaaaaaaaaaaaaaa',jobDetail);
-      const {name, JobTitle, Experiences , 
-         Educational, Responsibility, Description, Email,
-          Phone, Salary, address}=jobDetail;
+ 
+     
+
+      useEffect(()=>{
+      
+        const storedCart = getShoppingCart();
+        const savedCart = [];
+       
+        for(const id in storedCart){
+       
+            const addedProduct = products.find(product => product.id === id);
+       
+              if (addedProduct){
+              const quantity = storedCart[id];
+              addedProduct.quantity = quantity
+         
+              savedCart.push(addedProduct);
+              }
+        }
+
+        setCart(savedCart);
+    },[products])
+
+
+          const handleAddToCart = (product) =>{
+
+                    const newCart = [...cart, product];
+
+        
+            setCart(newCart);
+               addToDb(product.id)
+            }
+
+
+
+            const {JobTitle, Experiences , 
+                Educational, Responsibility, Description, Email,
+                 Phone, Salary, address}=jobDetail;
+
+
     return (
         <div className='grid md:grid-cols-6 gap-4 my-container'>
       <div className='col-start-1 col-end-3'>
@@ -39,7 +79,7 @@ const JobDetails = () => {
 <p>Email: {Email}</p>
 <p>Address: {address}</p>
 </div>
-<button className='btn-primary'>Apply Now</button>
+<Link to={'/appliedjobs'}><button  onClick={()=>handleAddToCart(jobDetail) } className='btn-primary'>Apply Now</button></Link>
       </div>
             
         </div>

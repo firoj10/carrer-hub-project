@@ -1,31 +1,32 @@
 [
     {
     "id": "623853b2614ad5aba311fdd1",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQdcUFU2hxFD9EapVXpq40tgwvTCkH0zzp1A&usqp=CAU",
-    "jobdurection": "150 Jobs Available",
-    "category": "Home Appliance"
+    "picture": "https://i.ibb.co/RjwCQWD/accounts-1.png",
+    "jobdurection": "100+ Jobs Available",
+    "category": "Account & Finance",
+    "athor": "https://i.ibb.co/X3b9L76/P3-OLGJ1-copy-1.png"
     },
     {
     "id": "623853b2578e9e6ad1ae0dd5",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQdcUFU2hxFD9EapVXpq40tgwvTCkH0zzp1A&usqp=CAU",
+    "picture": "https://i.ibb.co/XJ89myC/business-1.png",
+    "athor": "https://i.ibb.co/X3b9L76/P3-OLGJ1-copy-1.png",
+    "jobdurection": "300 Jobs Available",
 
-    "jobdurection": "150 Jobs Available",
-
-    "category": "Home Appliance"
+    "category": "Creative Design "
     },
     {
     "id": "623853b21fb149d2ee7b76c7",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQdcUFU2hxFD9EapVXpq40tgwvTCkH0zzp1A&usqp=CAU",
+    "picture": "https://i.ibb.co/YNNGFn4/chip-1.png",
 
-    "jobdurection": "150 Jobs Available",
-
-    "category": "Home Appliance"
+    "jobdurection": "150 Jobs Available                                                                                                                                                               ",
+    "athor": "https://i.ibb.co/X3b9L76/P3-OLGJ1-copy-1.png",
+    "category": "Marketing & Sales"
     },
     {
     "id": "623853b2e91c8de578c9245e",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQdcUFU2hxFD9EapVXpq40tgwvTCkH0zzp1A&usqp=CAU",
+    "picture": "https://i.ibb.co/hY0m7dJ/social-media-1.png",
 
-    "jobdurection": "150 Jobs Available",
-
-    "category": "Home Appliance"
+    "jobdurection": "224 Jobs Available",
+    "athor": "https://i.ibb.co/X3b9L76/P3-OLGJ1-copy-1.png",
+    "category": "Engineering Job"
     }]
