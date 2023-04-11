@@ -84,15 +84,6 @@ const JobDetails = () => {
       </div>
       <div className='col-end-7 col-span-2 '>
 <div className='p-10 bg-indigo-100 rounded-lg'>
-{/* <h2 className='pt-3'>Job Details</h2>
-<hr className='bg-indigo-700 border-b border-indigo-500 mt-4 mb-3' />
-<p className='p-1'>Salary: {Salary}</p>
-<p className='p-1'>Job Title: {JobTitle}</p>
-
-
-<p className='p-1'>Phone: {Phone}</p>
-<p className='p-1'>Email: {Email}</p> */}
-
 <h2 className='pt-3 font-bold'>Job Details</h2>
 <hr className='bg-indigo-700 border-b border-indigo-500 mt-4 mb-3' />
 <p className='flex pt-2'>
