@@ -48,9 +48,9 @@ const filteredTasks = localJob.filter((ljon) => {
     return (
         <div className='pt-20'>
              <div className='text-right my-container '>
-        <button className='btn-primary p-2 ml-5'  onClick={() => handleFilterClick('all')}>All jobs</button>
+       
         <button className='btn-primary p-2 ml-5'  onClick={() => handleFilterClick('completed')}>Remote Jobs</button>
-        <button  className='btn-primary p-2 ml-5' onClick={() => handleFilterClick('incomplete')}>Full-time Jobs</button>
+        <button  className='btn-primary p-2 ml-5' onClick={() => handleFilterClick('incomplete')}>Ontime Jobs</button>
       </div>
             {
                 filteredTasks.map(ljon =>(<AppliedJob

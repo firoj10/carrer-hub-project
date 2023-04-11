@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const  AppliedJob = ({ljon }) => {
-    const {JobTitle, name, Salary,loc,  address, img, locimg, takimg}=ljon;
+    const {id,JobTitle, name, Salary,loc,  address, img, locimg, takimg}=ljon;
     return (
         <div className=' mt-6 bg-slate-100 flex justify-between items-center my-container'>
          <div className='flex gap-20 '>
@@ -41,7 +41,7 @@ const  AppliedJob = ({ljon }) => {
          </div>
             <div className=''>
             
-            <Link className='btn-primary' to={'/'}> <button>View Details</button></Link>
+            <Link className='btn-primary' to={`/jobdetails/${id}`}> <button>View Details</button></Link>
             </div>
            
         </div>
