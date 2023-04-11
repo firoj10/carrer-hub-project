@@ -9,6 +9,7 @@ import Blog from './components/Blog/Blog';
 
 import JobDetails from './components/JobDetails/JobDetails';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
+import Statistics from './components/Statistics/Statistics';
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         loader: ()=> fetch('/products.json')
       },
       
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>
+      },
       {
         path: "blog",
         element: <Blog></Blog>
